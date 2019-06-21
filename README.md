@@ -1,5 +1,5 @@
 # abp-digitalent-2019
-Proyek ABP
+Demo App Digitalent at AMIKOM Business Park
 
 ## Requirement
 1. Android Studio
