@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sideMargin">25dp</dimen>
+    <dimen name="paddingVertical">25dp</dimen>
+    <dimen name="paddingHorizontal">15dp</dimen>
+    <dimen name="normalFont">15dp</dimen>
+    <dimen name="balanceFont">50dp</dimen>
+    <dimen name="rectanglePadding">7dp</dimen>
+</resources>

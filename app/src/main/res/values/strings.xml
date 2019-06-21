@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Cash Flow</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="usd">USD</string>
+    <string name="balance">$98.30</string>
+    <string name="last_payment">Last Payment: $10</string>
+    <string name="date">6 April, 2018</string>
+    <string name="transfer_money">Transfer Money</string>
+    <string name="request_money">Request Money</string>
+    <string name="activity">Activity</string>
+    <string name="view_all">View All</string>
+    <string name="wallet_transfer">Wallet Transfer</string>
+    <string name="money_sent_received">Money sent - received</string>
+    <string name="money_sent_pending">Money sent - pending</string>
 </resources>
