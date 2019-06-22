@@ -12,4 +12,6 @@
     <string name="wallet_transfer">Wallet Transfer</string>
     <string name="money_sent_received">Money sent - received</string>
     <string name="money_sent_pending">Money sent - pending</string>
+    <string name="action_setting">Setting</string>
+    <string name="action_logout">Logout</string>
 </resources>

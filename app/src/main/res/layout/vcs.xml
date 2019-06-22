@@ -5,6 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             app:contentInsetLeft="0dp"
             app:contentInsetStart="0dp"
@@ -181,11 +182,10 @@
                 android:textSize="@dimen/normalFont"
 
                 android:layout_weight="1"
-
-
         />
 
     </LinearLayout>
+
 
 
 
