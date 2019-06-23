@@ -6,9 +6,160 @@
               android:layout_height="match_parent">
 
 
-    <androidx.cardview.widget.CardView
-            app:cardBackgroundColor="@color/colorAccent"
-            app:cardCornerRadius="10dp"
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"/>
+            android:layout_height="210dp"
+            android:paddingVertical="@dimen/paddingVertical"
+            android:paddingHorizontal="@dimen/paddingHorizontal"
+            android:layout_marginRight="@dimen/sideMargin"
+            android:layout_marginLeft="@dimen/sideMargin"
+            android:background="@drawable/bg_rounded_rectangle"
+            android:orientation="vertical"
+    >
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/available_balance"
+                android:textColor="@color/text"
+                android:textSize="@dimen/normalFont"
+                android:gravity="center"
+
+        />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+        >
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/usd"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/normalFont"
+                        android:gravity="right"
+                        android:layout_weight="1"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/balance"
+                        android:textSize="@dimen/balanceFont"
+                        android:textColor="@color/text"
+                        android:layout_weight="1"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+        >
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_payment"
+                    android:textColor="@color/text"
+                    android:layout_weight="1"
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textColor="@color/text"
+                    android:gravity="right"
+                    android:layout_weight="1"
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/sideMargin"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+    >
+        <Button
+                android:backgroundTint="#FFFFFF"
+                android:paddingTop="20dp"
+                android:id="@+id/btnTransfer"
+                android:layout_width="wrap_content"
+                android:layout_height="108dp"
+                android:text="@string/transfer_money"
+                android:drawableTop="@drawable/money1"
+                android:layout_weight="1"
+        />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+        />
+
+        <Button
+                android:backgroundTint="#FFF"
+                android:paddingTop="20dp"
+                android:id="@+id/btnRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="108dp"
+                android:text="@string/request_money"
+                android:drawableTop="@drawable/money2"
+                android:layout_weight="1"
+        />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/sideMargin"
+            android:layout_marginTop="15dp"
+    >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/activity_margin"
+
+        />
+        <TextView
+                android:id="@+id/btnViewAll"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_all"
+                android:gravity="right"
+                android:layout_marginRight="@dimen/viewall_margin"
+                android:textSize="@dimen/normalFont"
+                android:layout_weight="1"
+        />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/recyler_margin_horizontal"
+            android:layout_marginTop="@dimen/recycler_margin_top"
+
+    >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

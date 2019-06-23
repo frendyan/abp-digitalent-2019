@@ -20,10 +20,11 @@ class MainActivity : AppCompatActivity(){
         //custom toolbar
         setSupportActionBar(toolbar)
 
-        //method untuk UI
+        //method untuk Toolbar
         initView()
         //method untuk Fragment
         initFragment()
+
     }
 
     private fun initFragment() {
@@ -33,10 +34,24 @@ class MainActivity : AppCompatActivity(){
             .commit()
     }
 
+    private fun settingFragment() {
+        val settingFragment = SettingFragment()
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.flFragment, settingFragment)
+                .commit()
+        }
+
+    private fun notificationFragment() {
+        val notificationFragment = NotificationFragment()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.flFragment, notificationFragment)
+            .commit()
+    }
+
     private fun initView() {
 
         ivNotification.setOnClickListener{
-            Toast.makeText(this@MainActivity, "Notification", Toast.LENGTH_SHORT).show()
+            onNotificationClick()
         }
 
         //Popup menu
@@ -47,18 +62,27 @@ class MainActivity : AppCompatActivity(){
             popup.setOnMenuItemClickListener {
                 when(it.itemId){
                     R.id.action_setting -> {
-                        Toast.makeText(this@MainActivity, "Setting", Toast.LENGTH_SHORT).show()
+                        onSettingClick()
                         true
                     }
                     R.id.action_logout -> {
-                    onLogoutClick()
-                    true
+                        onLogoutClick()
+                        true
                 }
                     else -> super.onOptionsItemSelected(it)
                 }
             }
             popup.show()
         }
+    }
+
+    private fun onNotificationClick() {
+        notificationFragment()
+    }
+
+
+    private fun onSettingClick() {
+        settingFragment()
     }
 
     private fun onLogoutClick() {

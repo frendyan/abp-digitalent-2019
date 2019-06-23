@@ -14,4 +14,7 @@
     <string name="money_sent_pending">Money sent - pending</string>
     <string name="action_setting">Setting</string>
     <string name="action_logout">Logout</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_activity">Login</string>
 </resources>
