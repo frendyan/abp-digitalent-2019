@@ -43,10 +43,13 @@
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <FrameLayout
-            android:id="@+id/flFragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
     />
 
 

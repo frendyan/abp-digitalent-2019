@@ -1,5 +1,6 @@
 package id.cashflow.android.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuInflater
@@ -23,30 +24,24 @@ class MainActivity : AppCompatActivity(){
         //method untuk Toolbar
         initView()
         //method untuk Fragment
-        initFragment()
+
 
     }
 
-    private fun initFragment() {
-        val mainFragment = MainFragment()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.flFragment, mainFragment)
-            .commit()
-    }
 
-    private fun settingFragment() {
-        val settingFragment = SettingFragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.flFragment, settingFragment)
-                .commit()
-        }
-
-    private fun notificationFragment() {
-        val notificationFragment = NotificationFragment()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.flFragment, notificationFragment)
-            .commit()
-    }
+//    private fun settingFragment() {
+//        val settingFragment = SettingFragment()
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.flFragment, settingFragment)
+//                .commit()
+//        }
+//
+//    private fun notificationFragment() {
+//        val notificationFragment = NotificationFragment()
+//        supportFragmentManager.beginTransaction()
+//            .replace(R.id.flFragment, notificationFragment)
+//            .commit()
+//    }
 
     private fun initView() {
 
@@ -77,15 +72,17 @@ class MainActivity : AppCompatActivity(){
     }
 
     private fun onNotificationClick() {
-        notificationFragment()
+//        notificationFragment()
     }
 
 
     private fun onSettingClick() {
-        settingFragment()
+//        settingFragment()
     }
 
     private fun onLogoutClick() {
+        val sharedPref = getSharedPreferences(LoginActivity.PREF_NAME, Context.MODE_PRIVATE)
+        sharedPref.edit().clear().apply()
         startActivity(Intent(this@MainActivity, LoginActivity::class.java))
         finish()
 

@@ -17,4 +17,11 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login_activity">Login</string>
+    <string name="email">E-mail</string>
+    <string name="user_email">jarjit@domain.com</string>
+    <string name="user_password">12345678</string>
+    <string name="msg_login_failed">Incorrect email or password, please try again!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
